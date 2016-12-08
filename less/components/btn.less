@@ -1,0 +1,73 @@
+.btn {
+	display: inline-block;
+	vertical-align: top;
+	color: #fff;
+	height: 32px;
+	font-family: @font-family-regular;
+	font-size: 13px;
+	line-height: 32px;
+	border: none;
+	padding: 0px 17px;
+	background: @color-blue;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	.box-sizing(border-box);
+	.border-radius(3px);
+	.transition(all .5s ease);
+	
+	&:hover {
+		background: @color-orange;
+		text-decoration: none;
+		color: #fff;
+	}
+	
+	&--fill {
+		width: 100%;
+		padding: 0px;
+	}
+	
+	&--white {
+		background: #fff;
+		color: @color-grey-bg;
+		
+		&:hover {
+			background: @color-grey-bg;
+		}
+	}
+	
+	&--white-bl {
+		background: #fff;
+		color: @color-blue-dark;
+	}
+	
+	&--share {
+		position: relative;
+		
+		&:before {
+			content: "";
+			display: inline-block;
+			vertical-align: top;
+			width: 14px;
+			height: 32px;
+			background: url("@{img-path}sprite.png") no-repeat 0px -68px;
+			margin-right: 7px;
+		}
+	}
+	
+	&--small {
+		height: 28px;
+		line-height: 28px;
+		padding: 0px 27px;
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: (@width-content-middle - 1)) {
+	.btn {
+		&--small {
+			font-size: 12px;
+			padding: 0px 18px;
+		}
+	}
+}

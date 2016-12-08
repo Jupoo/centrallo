@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Centrallo</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
+    </head>
+    <body>
+		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+			<symbol id="svg-twitter-icon" viewBox="0 0 20 16">
+				<g transform="translate(-1028.000000, -2084.000000)">
+					<g transform="translate(0.000000, 2052.000000)">
+						<path d="M1048,33.894449 C1047.26389,34.2154772 1046.47278,34.432595 1045.64333,34.5299426 C1046.49167,34.0300793 1047.14222,33.2392672 1047.44722,32.2964178 C1046.65389,32.7590922 1045.77722,33.0948865 1044.84056,33.2748154 C1044.09444,32.4900191 1043.02667,32 1041.84611,32 C1039.58111,32 1037.74389,33.8085863 1037.74389,36.0388296 C1037.74389,36.3560295 1037.77889,36.6633853 1037.85,36.9587093 C1034.44056,36.7897183 1031.41722,35.1834837 1029.39167,32.7383101 C1029.03833,33.3366147 1028.83722,34.0300793 1028.83722,34.770577 C1028.83722,36.1706317 1029.56167,37.4071643 1030.66167,38.1323489 C1029.99056,38.1121138 1029.35667,37.9289035 1028.80222,37.6281105 L1028.80222,37.6773311 C1028.80222,39.635767 1030.21722,41.2682527 1032.095,41.6379546 C1031.75111,41.7325677 1031.38944,41.7801477 1031.01389,41.7801477 C1030.74944,41.7801477 1030.49222,41.7560842 1030.24222,41.7085042 C1030.76444,43.3130982 1032.27833,44.4812688 1034.075,44.5124419 C1032.67,45.5963905 1030.9,46.2417282 1028.97889,46.2417282 C1028.64778,46.2417282 1028.32056,46.2236806 1028,46.1859448 C1029.81611,47.3311457 1031.97278,48 1034.28889,48 C1041.83833,48 1045.96389,41.8463221 1045.96389,36.5080667 C1045.96389,36.332513 1045.96056,36.1575062 1045.95278,35.9852338 C1046.755,35.4153678 1047.45222,34.7038556 1048,33.894449"></path>
+					</g>
+				</g>
+			</symbol>
+			<symbol id="svg-twitter-icon2" viewBox="0 0 20 16">
+				<g transform="translate(-1028.000000, -2084.000000)">
+					<g transform="translate(0.000000, 2052.000000)">
+						<path d="M1048,33.894449 C1047.26389,34.2154772 1046.47278,34.432595 1045.64333,34.5299426 C1046.49167,34.0300793 1047.14222,33.2392672 1047.44722,32.2964178 C1046.65389,32.7590922 1045.77722,33.0948865 1044.84056,33.2748154 C1044.09444,32.4900191 1043.02667,32 1041.84611,32 C1039.58111,32 1037.74389,33.8085863 1037.74389,36.0388296 C1037.74389,36.3560295 1037.77889,36.6633853 1037.85,36.9587093 C1034.44056,36.7897183 1031.41722,35.1834837 1029.39167,32.7383101 C1029.03833,33.3366147 1028.83722,34.0300793 1028.83722,34.770577 C1028.83722,36.1706317 1029.56167,37.4071643 1030.66167,38.1323489 C1029.99056,38.1121138 1029.35667,37.9289035 1028.80222,37.6281105 L1028.80222,37.6773311 C1028.80222,39.635767 1030.21722,41.2682527 1032.095,41.6379546 C1031.75111,41.7325677 1031.38944,41.7801477 1031.01389,41.7801477 C1030.74944,41.7801477 1030.49222,41.7560842 1030.24222,41.7085042 C1030.76444,43.3130982 1032.27833,44.4812688 1034.075,44.5124419 C1032.67,45.5963905 1030.9,46.2417282 1028.97889,46.2417282 C1028.64778,46.2417282 1028.32056,46.2236806 1028,46.1859448 C1029.81611,47.3311457 1031.97278,48 1034.28889,48 C1041.83833,48 1045.96389,41.8463221 1045.96389,36.5080667 C1045.96389,36.332513 1045.96056,36.1575062 1045.95278,35.9852338 C1046.755,35.4153678 1047.45222,34.7038556 1048,33.894449"></path>
+					</g>
+				</g>
+			</symbol>
+			<symbol id="svg-facebook-icon" viewBox="0 0 10 20">
+				<g transform="translate(-1066.000000, -2080.000000)">
+					<g transform="translate(0.000000, 2052.000000)">
+						<path d="M1066,34.6138889 L1068.14232,34.6138889 L1068.14232,32.605 C1068.14232,31.7183333 1068.16535,30.3516667 1068.83206,29.505 C1069.53503,28.6088889 1070.4994,28 1072.15867,28 C1074.86177,28 1076,28.3716667 1076,28.3716667 L1075.46399,31.4355556 C1075.46399,31.4355556 1074.57159,31.1855556 1073.7385,31.1855556 C1072.90483,31.1855556 1072.15867,31.4738889 1072.15867,32.2777778 L1072.15867,34.6138889 L1075.57568,34.6138889 L1075.33733,37.6061111 L1072.15867,37.6061111 L1072.15867,48 L1068.14232,48 L1068.14232,37.6061111 L1066,37.6061111 L1066,34.6138889"></path>
+					</g>
+				</g>
+			</symbol>
+			<symbol id="svg-vk-icon" viewBox="0 0 20 11">
+				<g transform="translate(-885.000000, -107.000000)">
+					<g transform="translate(820.000000, 101.000000)">
+						<g transform="translate(64.000000, 0.000000)">
+							<path d="M11.98083,16.9540235 C11.98083,16.9540235 12.3417861,16.9153584 12.526666,16.7239188 C12.6958948,16.5485111 12.6900256,16.2174998 12.6900256,16.2174998 C12.6900256,16.2174998 12.6675269,14.6718374 13.4119377,14.4436188 C14.1455883,14.2191724 15.0875956,15.9383564 16.0873168,16.5994359 C16.8424877,17.0992535 17.4157134,16.9898595 17.4157134,16.9898595 L20.0871796,16.9540235 C20.0871796,16.9540235 21.4840503,16.8710349 20.8218084,15.8119874 C20.7670291,15.7252266 20.4354191,15.0283111 18.8360609,13.5967581 C17.160403,12.0982483 17.3853891,12.3406127 19.4024391,9.74816247 C20.6310592,8.16949326 21.122116,7.20569402 20.9685385,6.79358026 C20.8227866,6.39938448 19.9189291,6.50406326 19.9189291,6.50406326 L16.91194,6.52198125 C16.91194,6.52198125 16.6889102,6.49274664 16.5235943,6.5879949 C16.3621912,6.68135706 16.2575237,6.89920209 16.2575237,6.89920209 C16.2575237,6.89920209 15.7821181,8.12045455 15.1472658,9.15969796 C13.808109,11.351351 13.2730332,11.4673464 13.0539162,11.3315469 C12.5442736,11.0137384 12.6714397,10.0565405 12.6714397,9.37659994 C12.6714397,7.25190357 13.0059844,6.36637766 12.0209362,6.137216 C11.6942172,6.06082878 11.4535798,6.01084702 10.6172182,6.00235955 C9.54413195,5.99198598 8.63636166,6.00613176 8.12182806,6.24849615 C7.7794578,6.40975805 7.5153436,6.77000395 7.67674672,6.7907511 C7.87532147,6.81621351 8.32529382,6.90768956 8.5639748,7.22078285 C8.87210804,7.6253522 8.86134783,8.53256832 8.86134783,8.53256832 C8.86134783,8.53256832 9.03840216,11.0335425 8.44756891,11.3438066 C8.0425938,11.5569364 7.48697578,11.1221894 6.29259266,9.1332925 C5.68121719,8.11479624 5.21950644,6.98879204 5.21950644,6.98879204 C5.21950644,6.98879204 5.13049017,6.77849142 4.97104345,6.66532517 C4.7783379,6.52858262 4.5093327,6.48614527 4.5093327,6.48614527 L1.65200831,6.50406326 C1.65200831,6.50406326 1.22257818,6.51537989 1.06508786,6.69550284 C0.925205156,6.85487864 1.05432765,7.18588993 1.05432765,7.18588993 C1.05432765,7.18588993 3.29147277,12.2321617 5.8250127,14.7755732 C8.14823948,17.106798 10.7854687,16.9540235 10.7854687,16.9540235 L11.98083,16.9540235 Z"></path>
+						</g>
+					</g>
+				</g>
+			</symbol>
+			<symbol id="svg-in-icon" viewBox="0 0 15 15">
+				<g transform="translate(-920.000000, -103.000000)">
+					<g transform="translate(820.000000, 101.000000)">
+						<g transform="translate(96.000000, 0.000000)">
+							<path d="M4.37835136,6.80983481 L7.30197554,6.80983481 L7.30197554,16.9990396 L4.37835136,16.9990396 L4.37835136,6.80983481 Z M5.7656397,5.53534383 L5.74447319,5.53534383 C4.6861477,5.53534383 4,4.75643488 4,3.77007299 C4,2.76354207 4.70643227,2 5.78592427,2 C6.86453434,2 7.52775165,2.76162121 7.54891816,3.7671917 C7.54891816,4.75355359 6.86453434,5.53534383 5.7656397,5.53534383 L5.7656397,5.53534383 Z M19,17 L15.6847954,17 L15.6847954,11.7262774 C15.6847954,10.3461391 15.1662159,9.4049174 14.0258702,9.4049174 C13.1536336,9.4049174 12.6685677,10.0397618 12.4427916,10.6534768 C12.3581256,10.8724549 12.3713547,11.1788321 12.3713547,11.4861698 L12.3713547,17 L9.08701787,17 C9.08701787,17 9.12935089,7.65885517 9.08701787,6.80983481 L12.3713547,6.80983481 L12.3713547,8.40895121 C12.565381,7.70975797 13.6148871,6.71187092 15.2896872,6.71187092 C17.3675329,6.71187092 19,8.17844794 19,11.3334614 L19,17 L19,17 Z"></path>
+						</g>
+					</g>
+				</g>
+			</symbol>
+		</svg>
+		
+		<div class="content-top">
+			<div class="content-top-inner">
+				<div class="download visible-adaptive-show-1024">
+					<div class="download__inner page-content-inner">
+						<div class="download__logo">
+							<div class="download__text1">Centrallo</div>
+							<div class="download__text2 visible-adaptive-hidden-768">Download it for free on the App Store</div>
+							<div class="download__text2 visible-adaptive-show-768">Free on the Google Play</div>
+						</div>
+						<div class="download__control">
+							<a href="" class="btn btn--white-bl btn--small">Download</a>
+							<a href="" class="download__close js-download-close"></a>
+						</div>
+					</div>
+				</div>
+				<header class="page-header">
+					<div class="page-content-inner">
+						<a href="/" class="page-header__logo"><img src="img/logo.png" alt="logo" /></a><a href="" class="page-header__log-in">Log in</a>
+						<div class="page-header__reg visible-adaptive-hidden-768"><a href="">Sing up for free</a> — start publishing in minutes</div>
+						<div class="page-header__reg visible-adaptive-show-768"><a href="">Sing up</a></div>
+					</div>
+				</header>
+
+				<main class="page-content">
+					<div class="page-content-inner">
+						<div class="post-top">
+							<div class="post-top__text col-adaptive-768">
+								<div class="post-top__personal">
+									<div class="post-top__img"><img src="img/ava.png" alt="Konstantin Vladimirskiy" /></div>
+									<div class="post-top__name"><div class="vert-middle"><div class="vert-middle__inner">Konstantin Vladimirskiy</div></div></div>
+								</div>
+								<div class="visible-adaptive-show-768 marg-t-20">
+									<div class="row row--padd16">
+										<div class="row__inner">
+											<div class="col-12-6"><a href="" class="btn btn--fill">Add to my Centrallo</a></div>
+											<div class="col-12-6"><a href="" class="btn btn--white btn--share btn--fill openmodal" data-id="modal-share">Share</a></div>
+										</div>
+									</div>
+								</div>
+								<div class="post-top__title">Post-release checklist 2015.02.26</div>
+							</div>
+							<div class="post-top__links visible-adaptive-hidden-768">
+								<div class="post-top__share">
+									<div class="post-top__socials">
+										<a href="" class="post-top__socials-link post-top--social-facebook"><svg><use xlink:href="#svg-facebook-icon"></use></svg></a>
+										<a href="" class="post-top__socials-link post-top--social-twitter"><svg><use xlink:href="#svg-twitter-icon"></use></svg></a>
+										<a href="" class="post-top__socials-link post-top--social-vk"><svg><use xlink:href="#svg-vk-icon"></use></svg></a>
+										<a href="" class="post-top__socials-link post-top--social-in"><svg><use xlink:href="#svg-in-icon"></use></svg></a>
+									</div>
+									<a href="" class="post-top__url">http://cll.io/a6lnu</a>
+								</div>
+								<a href="" class="btn">Add to my Centrallo</a>
+							</div>
+						</div>
+						<div class="post post--marker">
+							<div class="post__body">
+								<div class="pseudo-check">
+									<div class="pseudo-check__text">Referral Accepted and Invited invitations not sorted by A-Z</div>
+									<input name="" value="" type="checkbox" class="pseudo-check__real" />
+								</div>
+								<div class="pseudo-check check">
+									<div class="pseudo-check__text">Inbox shows me 242 items - that includes Done items; Only show me active</div>
+									<input name="" value="" type="checkbox" checked="checked" class="pseudo-check__real" />
+								</div>
+								<div class="pseudo-check check">
+									<div class="pseudo-check__text">Inbox defaults to show done items - it should not</div>
+									<input name="" value="" type="checkbox" checked="checked" class="pseudo-check__real" />
+								</div>
+								<div class="pseudo-check">
+									<div class="pseudo-check__text">Lists default to Show Done - they should not</div>
+									<input name="" value="" type="checkbox" class="pseudo-check__real" />
+								</div>
+								<div class="pseudo-check">
+									<div class="pseudo-check__text">Recent view should sort by Created and show no Done items</div>
+									<input name="" value="" type="checkbox" class="pseudo-check__real" />
+								</div>
+							</div>
+							<div class="post__footer">
+								<div class="post__date">2h ago</div>
+								<div class="post__links">
+									<a href="" class="post__link post--link-share"></a>
+									<a href="" class="post__link post--link-url"><span class="post__hint-wrap"><span class="post__hint"><span class="post__hint-inner">http://cll.io/a6lnu</span></span></span></a>
+								</div>
+							</div>
+						</div>
+						
+						<div class="post">
+							<div class="post__body">
+								<div class="post__cat post--cat-red">
+									<div class="post__cat-title">Children</div>
+									<div class="post__cat-info">
+										<div class="post__cat-date">7h ago</div>
+										<div class="post__cat-items">12 items</div>
+									</div>
+								</div>
+								
+								<div class="post__cat">
+									<div class="post__cat-title">The longest title in the world</div>
+									<div class="post__cat-info">
+										<div class="post__cat-date">Mar 13</div>
+										<div class="post__cat-items">3 items</div>
+									</div>
+								</div>
+							</div>
+							<div class="post__footer">
+								<div class="post__date">2h ago</div>
+								<div class="post__links">
+									<a href="" class="post__link post--link-share"></a>
+									<a href="" class="post__link post--link-url"><span class="post__hint-wrap"><span class="post__hint"><span class="post__hint-inner">http://cll.io/a6lnu</span></span></span></a>
+								</div>
+							</div>
+						</div>
+						
+						<div class="post">
+							<div class="post__body">
+								<div class="post__media-wrap">
+									<div class="post__media post--media-video">
+										<img src="img/video@2x.png" alt="video" />
+									</div>
+									<div class="post__media">
+										<img src="img/photo-1@3x.png" alt="photo-1" />
+									</div>
+									<div class="post__media">
+										<img src="img/photo-2@2x.png" alt="photo-2" />
+									</div>
+								</div>
+								<div class="post__due">Due on Feb 13, 12:42 PM</div>
+							</div>
+							<div class="post__footer">
+								<div class="post__date">Feb 14</div>
+								<div class="post__links">
+									<a href="" class="post__link post--link-share"></a>
+									<a href="" class="post__link post--link-url"><span class="post__hint-wrap"><span class="post__hint"><span class="post__hint-inner">http://cll.io/a6lnu</span></span></span></a>
+								</div>
+							</div>
+						</div>
+						
+						<div class="post">
+							<div class="post__body">
+								<p>The Dark Knight Rises is a 2012 British-American superhero film directed by Christopher Nolan, who co-wrote the screenplay with his brother Jonathan Nolan, and the story with David S. Goyer. Featuring the DC Comics character Batman, the film is the final installment in Nolan's Batman film trilogy, and the sequel to Batman Begins (2005) and The Dark Knight (2008). Christian Bale reprises the lead role of Bruce Wayne/Batman, with a returning cast of allies: Michael Caine as Alfred Pennyworth, Gary Oldman as James Gordon, and Morgan Freeman as Lucius Fox. The film introduces Selina Kyle (Anne Hathaway), a sly, morally ambiguous cat burglar, and Bane (Tom Hardy), a revolutionary bent on destroying Gotham City who forces an older Bruce Wayne to come out of retirement and become Batman again.</p>
+								<div class="post__media-wrap">
+									<div class="post__media">
+										<img src="img/photo-3@2x.png" alt="photo-3" />
+									</div>
+									<div class="post__media">
+										<img src="img/photo-4@3x.png" alt="photo-4" />
+									</div>
+									<div class="post__media">
+										<img src="img/photo-5@2x.png" alt="photo-5" />
+									</div>
+									<div class="post__media">
+										<img src="img/photo-6@2x.png" alt="photo-6" />
+									</div>
+								</div>
+								<div class="separate"></div>
+								<div class="post__contacts">
+									<div class="post__contacts-map col-adaptive-768">
+										<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1798.2696992714623!2d-74.00212706391754!3d40.71103565896982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a23996bd1cf%3A0x275c019f81a40726!2sMurry+Bergtraum+High+School+For+Business+Careers!5e0!3m2!1sru!2sru!4v1481027546603" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+									</div>
+									<div class="post__contacts-info col-adaptive-768">
+										<div class="post__contacts-title">Merry Bergtraum High School for Business Cariers</div>
+										<div class="post__contacts-address">411 Pearl St, NY 10038<br />United States of America</div>
+										<a href="https://goo.gl/maps/9u8rkEYDFXL2" target="_blank" class="post__contacts-mapurl">Watch location on Google Maps</a>
+									</div>
+								</div>
+								<div class="separate"></div>
+								<div class="post__files">
+									<a href="" class="post__file post--file-eps">logo_final.eps</a>
+									<a href="" class="post__file post--file-zip">photos_summer.zip</a>
+									<a href="" class="post__file post--file-doc">work_…hard.doc</a>
+								</div>
+							</div>
+							<div class="post__footer">
+								<div class="post__date">Jan 12</div>
+								<div class="post__links">
+									<a href="" class="post__link post--link-share"></a>
+									<a href="" class="post__link post--link-url"><span class="post__hint-wrap"><span class="post__hint"><span class="post__hint-inner">http://cll.io/a6lnu</span></span></span></a>
+								</div>
+							</div>
+						</div>
+						
+						<div class="post post--marker post--protected visible-adaptive-hidden-1024">
+							<div class="post__footer">
+								<div class="post__date">Nov 22</div>
+								<div class="post__info">Protected</div>
+							</div>
+						</div>
+						
+						<div class="post post--marker post--archived visible-adaptive-hidden-1024">
+							<div class="post__footer">
+								<div class="post__date">Nov 21</div>
+								<div class="post__info">Archived</div>
+							</div>
+						</div>
+					</div>
+				</main>
+			</div>
+		</div>
+
+		<footer class="page-footer">
+			<div class="page-content-inner">
+				<div class="page-footer__copyright visible-adaptive-hidden-768">© Centrallo 2015</div>
+				<div class="page-footer__socials">
+					<a href="" class="page-footer__socials-link page-footer--social-twitter"><svg><use xlink:href="#svg-twitter-icon2"></use></svg></a>
+					<a href="" class="page-footer__socials-link page-footer--social-facebook"><svg><use xlink:href="#svg-facebook-icon"></use></svg></a>
+				</div>
+				<nav class="page-footer__nav">
+					<ul>
+						<li><a href="">Privacy</a></li>
+						<li><a href="">Terms</a></li>
+						<li><a href="">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</footer>
+		
+		<div class="modal-window" id="modal-share">
+			<div class="modal-window__header">Share</div>
+			<div class="modal-window__body">
+				<a href="" class="modal-window__url">http://cll.io/a6lnu</a>
+				<div class="modal-window__socials">
+					<a href="" class="modal-window__socials-link modal-window--social-facebook"><svg><use xlink:href="#svg-facebook-icon"></use></svg></a>
+					<a href="" class="modal-window__socials-link modal-window--social-twitter"><svg><use xlink:href="#svg-twitter-icon"></use></svg></a>
+					<a href="" class="modal-window__socials-link modal-window--social-vk"><svg><use xlink:href="#svg-vk-icon"></use></svg></a>
+					<a href="" class="modal-window__socials-link modal-window--social-in"><svg><use xlink:href="#svg-in-icon"></use></svg></a>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="js/scripts.js"></script>
+		<script type="text/javascript" src="js/modal-window.js"></script>
+	</body>
+</html>

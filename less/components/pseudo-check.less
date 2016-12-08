@@ -1,0 +1,40 @@
+.pseudo-check {
+	cursor: pointer;
+	margin: 5px 0px;
+	
+	&:first-child {
+		margin-top: 0px;
+	}
+	
+	&:last-child {
+		margin-bottom: 0px;
+	}
+	
+	&__text {
+		padding-left: 24px;
+		position: relative;
+		font-size: 16px;
+		line-height: 23px;
+		
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 3px;
+			left: 0px;
+			width: 14px;
+			height: 14px;
+			background: url("@{img-path}sprite.png") no-repeat 0px 0px;
+		}
+	}
+	
+	&.check &__text {
+		&:after {
+			background-position: 0px -14px;
+		}
+	}
+	
+	&__real {
+		display: none;
+	}
+}

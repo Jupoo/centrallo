@@ -1,0 +1,167 @@
+html, body {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	//min-width: @width-content-max;
+	position: relative;
+}
+
+.content-top {
+	min-height:100%; /* Задаем минимальную высоту 100% */
+	_height:100%; /* Задаем высоту 100% в ИЕ6 с помощью хака */
+}
+
+.content-top-inner {
+	padding-bottom: @footer-height; /* Задаём нижний отступ, равный высоте футера или больше */
+}
+
+body {
+	background: @bg-base;
+	color:  @text-color-base;
+	font: normal @font-size-base/@line-height-base @font-family-base;
+}
+
+.page-content-inner {
+	margin: 0 auto;
+	width: @width-content-max-inner;
+}
+
+.page-content {
+	width: 100%;
+	background: @bg-base;
+	padding-bottom: 80px;
+}
+
+a {
+	color: @link-color;
+	text-decoration: @link-decoration;
+	.transition(color .5s ease);
+
+	&:hover {
+		color: @link-hover-color;
+		text-decoration: @link-hover-decoration;
+	}
+}
+
+.separate {
+	width: 100%;
+	height: 1px;
+	margin: 25px 0px;
+	background: @color-separate;
+}
+
+.after-parent {
+	.clearfix();
+}
+
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+
+.block {
+	display: block;
+}
+
+.none {
+	display: none;
+}
+
+.vert-middle {
+	width: 100%;
+    height: 100%;
+	font-size: 0;
+	
+	&:before {
+		content: "";
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 0;
+		width: 0;
+		height: 100%;
+	}
+
+	&__inner {
+		display: inline-block;
+		vertical-align: middle;
+		width: 100%;
+	  	font-size: 16px;
+	}
+}
+
+.row {
+	margin: 0px 0px;
+	
+	&__inner {
+		font-size: 0;
+		display: table;
+		width: 100%;
+	}
+
+	& .col-12-1, & .col-12-2, & .col-12-3, & .col-12-4, & .col-12-5, & .col-12-6, & .col-12-7, & .col-12-8, & .col-12-9, & .col-12-10, & .col-12-11, & .col-12-12 {
+		display: inline-block;
+		vertical-align: top;
+		font-size: @font-size-base;
+		letter-spacing: normal;
+		padding: 0px 0px;
+		.box-sizing(border-box);
+	}
+	
+	&--padd16 {
+		margin: 0px -8px;
+	}
+	
+	&--padd16 .col-12-1, &--padd16 .col-12-2, &--padd16 .col-12-3, &--padd16 .col-12-4, &--padd16 .col-12-5, &--padd16 .col-12-6, &--padd16 .col-12-7, &--padd16 .col-12-8, &--padd16 .col-12-9, &--padd16 .col-12-10, &--padd16 .col-12-11, &--padd16 .col-12-12 {
+		padding: 0px 8px;
+	}
+}
+
+.marg-t-20 {
+	margin-top: 20px;
+}
+
+.pos-center {
+	text-align: center;
+}
+
+.pos-right {
+	text-align: right;
+}
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: (@width-content-max - 1)) {
+	.page-content-inner {
+		width: 100%;
+		padding: 0 @padd-mobile;
+		.box-sizing(border-box);
+	}
+}
+
+//------------------- < 1024 ------------------//
+@media only screen and (max-width: (@width-content-normal - 1)) {
+	.content-top-inner {
+		padding-bottom: @footer-height-mobile; /* Задаём нижний отступ, равный высоте футера или больше */
+	}
+}
+
+//------------------- < 1024 и > 767 ------------------//
+@media only screen and (min-width: @width-content-middle) and (max-width: (@width-content-normal - 1)) {
+	.page-content {
+		padding-bottom: 45px;
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: (@width-content-middle - 1)) {
+	html, body {
+		min-width: @width-content-min;
+	}
+	
+	.page-content {
+		padding-bottom: 40px;
+	}
+}

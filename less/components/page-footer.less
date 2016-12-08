@@ -1,0 +1,137 @@
+.page-footer {
+	margin-top: -(@footer-height);
+	height: @footer-height;
+	background: @color-grey-bg;
+	color: @color-grey-light;
+	.clearfix();
+	font-size: 12px;
+	line-height: 20px;
+	text-transform: uppercase;
+	font-family: @font-family-medium;
+	padding: 30px 0px;
+	.box-sizing(border-box);
+	
+	&__copyright {
+		float: left;
+		width: 133px;
+	}
+	
+	&__socials {
+		float: right;
+		width: 133px;
+		text-align: right;
+		overflow: hidden;
+	}
+	
+	&__socials-link {
+		display: inline-block;
+		vertical-align: top;
+		height: 20px;
+		margin: 0px 7px;
+		
+		& svg {
+			max-height: 20px;
+			fill: @color-grey-light;
+			.transition(all .5s ease);
+		}
+		
+		&:hover {
+			& svg {
+				fill: @color-blue;
+			}
+		}
+		
+		&:last-child {
+			margin-right: 0px;
+		}
+		
+		&:first-child {
+			margin-left: 0px;
+		}
+	}
+	
+	&--social-twitter {
+		& svg {
+			max-width: 20px;
+		}
+	}
+	
+	&--social-facebook {
+		& svg {
+			max-width: 10px;
+		}
+	}
+	
+	&__nav {
+		overflow: hidden;
+		text-align: center;
+		
+		& li {
+			display: inline-block;
+			vertical-align: top;
+			margin: 0px 8px;
+			
+			&:first-child {
+				margin-left: 0px;
+			}
+			
+			&:last-child {
+				margin-right: 0px;
+			}
+		}
+		
+		& li a {
+			display: block;
+			color: @color-grey-light;
+			letter-spacing: 0.4px;
+			
+			&:hover {
+				color: @color-blue;
+			}
+		}
+	}
+}
+
+//------------------- < 1024 ------------------//
+@media only screen and (max-width: (@width-content-normal - 1)) {
+	.page-footer {
+		margin-top: -(@footer-height-mobile);
+		height: @footer-height-mobile;
+		padding: 22px 0px;
+		font-size: 11px;
+		
+		&__socials-link {
+			height: 16px;
+			margin: 0px 7px;
+			
+			& svg {
+				max-height: 16px;
+			}
+		}
+		
+		&--social-twitter {
+			& svg {
+				max-width: 16px;
+			}
+		}
+		
+		&--social-facebook {
+			& svg {
+				max-width: 8px;
+			}
+		}
+  	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: (@width-content-middle - 1)) {
+  	.page-footer {
+	  	&__nav {
+			text-align: left;
+		}
+		
+		&__socials {
+			width: auto;
+		}
+  	}
+}

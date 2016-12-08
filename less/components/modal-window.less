@@ -1,0 +1,173 @@
+.modal-shadow {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	display: none;
+	margin: auto;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 800;
+	opacity: 0;
+	cursor: pointer;
+  
+	&.js-active {
+		display: block;
+	}
+}
+
+.closemodal {
+	position: absolute;
+	top: 13px;
+	right: 13px;
+	text-decoration: none;
+	background: url("@{img-path}sprite.png") no-repeat -79px -108px;
+	width: 13px;
+	height: 13px;
+	display: block;
+	
+	&:hover {
+		background-position: -79px -121px;
+	}
+}
+
+.modal-window {
+	position: fixed;
+	top: 50%;
+	left: 0px;
+	right: 0px;
+	margin: auto;
+	width: 280px;
+	max-width: 88%;
+	.box-sizing(border-box);
+	z-index: 999;
+	background: @bg-light;
+	opacity: 0;
+	.border-radius(3px);
+	
+	&.js-window-absolut {
+		position: absolute;
+	}
+	&.js-window {
+		display: none;
+	}
+	&.js-active {
+		display: block;
+	}
+	
+	&__body {
+		padding: 20px 10px;
+		padding-bottom: 30px;
+		text-align: center;
+	}
+	
+	&__header {
+		font-size: 22px;
+		line-height: 24px;
+		text-align: center;
+		color: #404143;
+		padding: 18px 10px;
+		background: #fff;
+		.border-radius(3px 3px 0px 0px);
+	}
+	
+	&__url {
+		display: inline-block;
+		vertical-align: top;
+		color: #fff;
+		font-size: 20px;
+		line-height: 24px;
+		padding: 0px 3px;
+		background: @color-blue;
+		text-decoration: none;
+		.transition(background .5s ease);
+		white-space: nowrap;
+		overflow: hidden;
+		max-width: 100%;
+		.box-sizing(border-box);
+		
+		&:hover {
+			background: @color-orange;
+			color: #fff;
+		}
+	}
+	
+	&__socials {
+		height: 36px;
+		margin-top: 40px;
+	}
+	
+	&__socials-link {
+		display: inline-block;
+		vertical-align: top;
+		width: 36px;
+		height: 36px;
+		margin: 0px 8px;
+		.border-radius(18px);
+		.transition(all .5s ease);
+		
+		& svg {
+			max-height: 36px;
+			fill: #fff; 
+		}
+		
+		&:last-child {
+			margin-right: 0px;
+		}
+		
+		&:first-child {
+			margin-left: 0px;
+		}
+	}
+	
+	&--social-facebook {
+		background: #3a589c;
+		
+		& svg {
+			max-width: 9px;
+		}
+		
+		&:hover {
+			background: darken(#3a589c, 10%);
+		}
+	}
+	
+	&--social-twitter {
+		background: #29a9e1;
+		
+		& svg {
+			max-width: 17px;
+		}
+		
+		&:hover {
+			background: darken(#29a9e1, 10%);
+		}
+	}
+	
+	&--social-vk {
+		background: #5a7ba0;
+		
+		& svg {
+			max-width: 20px;
+		}
+		
+		&:hover {
+			background: darken(#5a7ba0, 10%);
+		}
+	}
+	
+	&--social-in {
+		background: #007bb8;
+		
+		& svg {
+			max-width: 16px;
+			margin-top: -1px;
+		}
+		
+		&:hover {
+			background: darken(#007bb8, 10%);
+		}
+	}
+}

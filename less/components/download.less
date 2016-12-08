@@ -1,0 +1,77 @@
+.download {
+	height: 50px;
+	background: @color-blue;
+	
+	&__inner {
+		.clearfix();
+	}
+	
+	&__logo {
+		float: left;
+		padding-left: 40px;
+		position: relative;
+		margin-top: 9px;
+		color: #fff;
+		
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 34px;
+			height: 33px;
+			background: url("@{img-path}sprite.png") no-repeat 0px -108px;
+		}
+	}
+	
+	&__text1 {
+		font-family: @font-family-medium;
+		font-size: 14px;
+		line-height: 14px;
+	}
+	
+	&__text2 {
+		font-size: 12px;
+		line-height: 22px;
+	}
+	
+	&__control {
+		float: right;
+		padding: 11px 0px;
+	}
+	
+	&__close {
+		width: 12px;
+		height: 12px;
+		margin-top: 8px;
+		display: inline-block;
+		vertical-align: top;
+		background: url("@{img-path}sprite.png") no-repeat -67px -108px;
+		margin-left: 26px;
+		
+		&:hover {
+			background-position: -67px -120px;
+		}
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: (@width-content-middle - 1)) {
+	.download {
+		&__logo {
+			&:after {
+				width: 33px;
+				height: 33px;
+				background-position: -34px -108px;
+			}
+		}
+		
+		&__close {
+			margin-left: 12px;
+		}
+		
+		&__text2 {
+			font-size: 11px;
+		}
+	}
+}

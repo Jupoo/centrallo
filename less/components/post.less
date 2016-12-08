@@ -1,0 +1,415 @@
+.post {
+	padding: 30px;
+	background: #fff;
+	.border-radius(@border-radius-base);
+	margin: 12px 0px;
+	
+	&--marker {
+		position: relative;
+		
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			width: 48px;
+			height: 48px;
+			background: url("@{img-path}sprite.png") no-repeat -54px 0px;
+		}
+	}
+	
+	&--protected {
+		&:after {
+			background-position: -102px 0px;
+		}
+	}
+	
+	&--archived {
+		background: rgba(255, 255, 255, 0.7);
+		
+		&:after {
+			background-position: -150px 0px;
+		}
+	}
+	
+	&__body {
+		margin-bottom: 20px;
+		
+		& p {
+			font-size: 16px;
+			line-height: 26px;
+			margin-bottom: 20px;
+		}
+	}
+	
+	&__footer {
+		.clearfix();
+	}
+	
+	&__date {
+		float: left;
+		color: @color-grey-extralight;
+		line-height: 20px;
+	}
+	
+	&__info {
+		float: right;
+		line-height: 20px;
+		color: @color-blue-dark;
+	}
+	
+	&--archived &__info {
+		color: @color-grey;
+	}
+	
+	&__links {
+		float: right;
+		.clearfix();
+	}
+	
+	&__link {
+		display: block;
+		width: 20px;
+		height: 20px;
+		background-image: url("@{img-path}sprite.png");
+		background-repeat: no-repeat;
+		float: left;
+		margin-left: 23px;
+	}
+	
+	&--link-share {
+		background-position: -14px 0px;
+		
+		&:hover {
+			background-position: -14px -20px;
+		}
+	}
+	
+	&--link-url {
+		background-position: -34px 0px;
+		position: relative;
+		
+		&:hover {
+			background-position: -34px -20px;
+		}
+	}
+	
+	&__cat {
+		.clearfix();
+		font-size: 16px;
+		line-height: 20px;
+		border-bottom: solid 1px @color-separate;
+		padding: 14px 0px;
+		
+		&:first-child {
+			padding-top: 0px;
+		}
+		
+		&:last-child {
+			border-bottom: none;
+			padding-bottom: 0px;
+		}
+	}
+	
+	&__cat-title {
+		float: left;
+		width: 70%;
+		.box-sizing(border-box);
+		color: @color-grey-dark;
+		font-family: @font-family-medium;
+		padding-left: 32px;
+		position: relative;
+		
+		&:after {
+			content: "";
+			position: absolute;
+			top: 2px;
+			left: 0px;
+			width: 16px;
+			height: 14px;
+			background: url("@{img-path}sprite.png") no-repeat 0px -40px;
+		}
+	}
+	
+	&--cat-red &__cat-title {
+		&:after {
+			background-position: 0px -54px;
+		}
+	}
+	
+	&__cat-info {
+		float: right;
+		width: 30%;
+		.clearfix();
+		color: @color-grey;
+	}
+	
+	&__cat-items {
+		float: right;
+	}
+	
+	&__cat-date {
+		float: right;
+		margin-left: 50px;
+	}
+	
+	&__media-wrap {
+		margin: -4px;
+	}
+	
+	&__media {
+		display: inline-block;
+		vertical-align: top;
+		height: 140px;
+		width: auto;
+		margin: 4px;
+		background: @bg-light;
+		
+		& img {
+			height: 100%;
+		}
+	}
+	
+	&--media-video {
+		position: relative;
+		
+		&:after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 60px;
+			height: 60px;
+			margin-top: -30px;
+			margin-left: -30px;
+			background: url("@{img-path}sprite.png") no-repeat -16px -48px;
+		}
+	}
+	
+	&__due {
+		font-size: 16px;
+		line-height: 20px;
+		border-top: solid 1px @color-separate;
+		padding-top: 18px;
+		padding-left: 32px;
+		margin-top: 30px;
+		color: @color-grey;
+		position: relative;
+		
+		&:after {
+			content: "";
+			position: absolute;
+			top: 16px;
+			left: 0px;
+			width: 18px;
+			height: 20px;
+			background: url("@{img-path}sprite.png") no-repeat -76px -48px;
+		}
+	}
+	
+	&__contacts {
+		.clearfix();
+	}
+	
+	&__contacts-map {
+		float: left;
+		width: 300px;
+		height: 200px;
+		overflow: hidden;
+		background: @bg-light;
+	}
+	
+	&__contacts-info {
+		overflow: hidden;
+		padding-left: 16px;
+		font-size: 16px;
+		line-height: 26px;
+	}
+	
+	&__contacts-title {
+		font-family: @font-family-medium;
+		color: @color-grey-dark;
+	}
+	
+	&__contacts-address {
+		color: @color-grey;
+	}
+	
+	&__contacts-mapurl {
+		display: block;
+		color: @color-blue-dark;
+		.transition(color .5s ease);
+		margin-top: 8px;
+		
+		&:hover {
+			color: darken(@color-blue-dark, 5%);
+		}
+	}
+	
+	&__files {
+		margin: -13px -4px;
+	}
+	
+	&__file {
+		display: inline-block;
+		vertical-align: top;
+		width: 150px;
+		font-size: 14px;
+		line-height: 20px;
+		white-space: nowrap;
+		text-align: center;
+		position: relative;
+		padding-top: 67px;
+		color: @color-grey-dark;
+		margin: 13px 4px;
+		overflow: hidden;
+		
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0px;
+			left: 50%;
+			margin-left: -23px;
+			width: 46px;
+			height: 58px;
+			background-image: url("@{img-path}sprite.png");
+			background-repeat: no-repeat;
+		}
+		
+		&:hover {
+			color: @color-blue;
+		}
+	}
+	
+	&--file-eps {
+		&:after {
+			background-position: -94px -48px;
+		}
+	}
+	
+	&--file-zip {
+		&:after {
+			background-position: -140px -48px;
+		}
+	}
+	
+	&--file-doc {
+		&:after {
+			background-position: -186px -48px;
+		}
+	}
+	
+	&__hint-wrap {
+		display: none;
+		position: absolute;
+		top: -46px;
+		left: -250px;
+		margin-left: 10px;
+		text-align: center;
+		background: none;
+		width: 500px;
+	}
+	
+	&--link-url:hover &__hint-wrap {
+		display: block;
+	}
+	
+	&__hint {		
+		display: inline-block;
+		vertical-align: top;
+		padding: 10px 12px;
+		background: rgba(64, 64, 64, 0.7);
+		.border-radius(3px);
+		position: relative;
+		
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: -6px;
+			left: 50%;
+			margin-left: -6px;
+			width: 12px;
+			height: 6px;
+			background: url("@{img-path}sprite.png") no-repeat -76px -100px;
+		}
+	}
+	
+	&__hint-inner {
+		display: block;
+		font-size: 14px;
+		line-height: 16px;
+		background: @color-blue;
+		color: #fff;
+		white-space: nowrap;
+		padding: 0px 3px;
+	}
+}
+
+//------------------- < 1024 ------------------//
+@media only screen and (max-width: (@width-content-normal - 1)) {
+	.post {
+		&__hint-wrap {
+			display: none !important;
+		}
+	}
+}
+
+//------------------- < 1024 и > 767 ------------------//
+@media only screen and (min-width: @width-content-middle) and (max-width: (@width-content-normal - 1)) {
+	.post {
+		&__media {
+			height: 120px;
+		}
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: (@width-content-middle - 1)) {
+	.post {
+		&__media {
+			width: 100%;
+			height: auto;
+			
+			& img {
+				width: 100%;
+				max-width: 300px;
+				height: auto;
+				margin: 0 auto;
+			}
+		}
+		
+		&__contacts-map {
+			float: none;
+		}
+		
+		&__contacts-info {
+			margin-top: 10px;
+			overflow: visible;
+			padding-left: 0px;
+		}
+		
+		&__cat {
+			border-bottom: none;
+			padding: 9px 0px;
+		}
+		
+		&__cat-info {
+			width: 100%;
+			margin-top: 6px;
+		}
+		
+		&__cat-title {
+			width: 100%;
+		}
+		
+		&__cat-date {
+			float: left;
+			margin-left: 0px;
+		}
+		
+		&__file {
+			width: 110px;
+		}
+	}
+}

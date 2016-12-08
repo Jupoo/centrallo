@@ -1,0 +1,76 @@
+//Модульная сетка 12 колонок
+.generate-columns(@n, @i: 1) when (@i =< @n) { // Условие выполнения!
+  // @n — количество колонок
+  // @i — внутренний счетчик от 1 до @n
+  
+  // Собственно, генерация
+  .col-@{n}-@{i} {
+    width: (@i * 100% / @n);
+  }
+
+  // Рекурсовный самовызов с увеличенным на 1 счетчиком
+  .generate-columns(@n, (@i + 1));
+}
+.generate-columns(12);
+//.generate-columns(10);
+
+
+// Clearfix
+.clearfix() {
+    &:before,
+    &:after {
+      content: " "; // 1
+      display: table; // 2
+    }
+    &:after {
+      clear: both;
+    }
+}
+
+.transition(@param) {
+	-webkit-transition: @param;
+	-moz-transition: @param;
+	-o-transition: @param;
+	transition: @param;
+}
+
+.bg-cover() {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.bg-size(@bg-size) {
+  -webkit-background-size: @bg-size;
+  -moz-background-size: @bg-size;
+  -o-background-size: @bg-size;
+  background-size: @bg-size;
+}
+
+.box-sizing(@sizin-param) {
+  box-sizing: @sizin-param;
+  -moz-box-sizing: @sizin-param;
+  -webkit-box-sizing: @sizin-param;
+}
+
+.box-shadow(@shadow-param) {
+  -webkit-box-shadow: @shadow-param;
+  -moz-box-shadow: @shadow-param;
+  box-shadow: @shadow-param;
+}
+
+.border-radius(@radius) {
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -khtml-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.opacity(@opacity) {
+	@opacity2: @opacity * 100;
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=@opacity2);
+	-moz-opacity: @opacity;
+	-khtml-opacity: @opacity;
+	opacity: @opacity;
+}

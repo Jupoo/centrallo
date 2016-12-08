@@ -1,0 +1,33 @@
+.visible-adaptive-show-1024 {
+	display: none;
+}
+
+.visible-adaptive-show-768 {
+	display: none;
+}
+
+//------------------- < 1024 ------------------//
+@media only screen and (max-width: (@width-content-normal - 1)) {
+	.visible-adaptive-hidden-1024 {
+		display: none;
+  	}
+	
+	.visible-adaptive-show-1024 {
+		display: block;
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: (@width-content-middle - 1)) {
+	.visible-adaptive-hidden-768 {
+		display: none;
+  	}
+	
+	.visible-adaptive-show-768 {
+		display: block;
+  	}
+	
+	.col-adaptive-768 {
+		width: 100%;
+	}
+}
